@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#888",
+    "navigationBarTitleText": "华安的小程序",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#eeeeee",
+    "onPullDownRefresh":"true"
+
+  },
+  "tabBar": {
+    "color":"#00ffff",
+    "selectedColor":"#ff00ff",
+    "backgroundColor":"#ffff00",
+    "borderStyle":"black",
+    "position":"top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
