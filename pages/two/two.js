@@ -5,6 +5,8 @@ const app = getApp()
 
 Page({
   data: {
+    inputValue: "",
+    enter:"\n",
     text: initData,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     hasUserInfo:false,
@@ -19,7 +21,24 @@ Page({
         type: 'text',
         text: 'Hello&nbsp;World!'
       }]
-    }]
+    }], 
+    items: [
+      { name: 'USA', value: '美国', color: '#00f'},
+      { name: 'CHN', value: '中国', checked: 'true',color:'#f00'},
+      { name: 'BRA', value: '巴西', color: '#0f0'},
+      { name: 'JPN', value: '日本' ,disabled:"true"},
+      { name: 'ENG', value: '英国' },
+      { name: 'TUR', value: '法国' },
+    ]
+  }, 
+  bindKeyInput: function(e){
+    this.setData({
+    inputValue:e.detail.value
+    })
+  },
+
+  checkboxChange: function (e) {
+    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
   },
   add: function (e) {
     extraLine.push('other line')
@@ -45,6 +64,12 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  formReset: function () {
+    console.log('form发生了reset事件')
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
