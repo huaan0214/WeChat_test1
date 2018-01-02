@@ -1,0 +1,19 @@
+<view class="btn-area">
+  <view class="body-view">
+    <text selectable='true'>{{text}}</text>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove" >remove line</button>
+  </view>
+</view>
+<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+<progress percent="20" show-info />
+<progress percent="40" stroke-width="12"  />
+<progress percent="60" activeColor="black" backgroundColor='#aaa' show-info active />
+<progress percent="80" active show-info/>
+
+<view >
+<!--button  wx:if="{{canIUse}}" plain size="mini" type="default" open-type="getUserInfo">获取用户信息</button-->
+<button wx:if="{{!hasUserInfo && canIUse}}" loading plain size="mini" type="warn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">未获取用户信息</button>
+<button wx:else plain size="mini" type="primary" open-type="share">转发</button>
+
+</view>

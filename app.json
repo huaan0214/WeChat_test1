@@ -1,11 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/one/one",
+    "pages/two/two"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#888",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "华安的小程序",
     "navigationBarTextStyle":"black",
     "backgroundColor":"#eeeeee",
@@ -15,7 +17,7 @@
   "tabBar": {
     "color":"#00ffff",
     "selectedColor":"#ff00ff",
-    "backgroundColor":"#ffff00",
+    "backgroundColor":"#fff",
     "borderStyle":"black",
     "position":"top",
     "list": [
@@ -26,6 +28,14 @@
       {
         "pagePath": "pages/logs/logs",
         "text": "日志"
+      },
+      {
+        "pagePath": "pages/one/one",
+        "text": "test1"
+      },
+      {
+        "pagePath": "pages/two/two",
+        "text": "test2"
       }
     ]
   },
