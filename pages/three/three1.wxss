@@ -1,0 +1,9 @@
+/* pages/three/three1.wxss */
+.hover-three1{
+  color:#00e;
+  padding:10px;
+}
+.navigator-three1{
+padding:10px;
+color:#88e;
+}

@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/one/one",
-    "pages/two/two"
+    "pages/two/two",
+    "pages/three/three",
+    "pages/three/three1"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -36,6 +38,10 @@
       {
         "pagePath": "pages/two/two",
         "text": "test2"
+      },
+      {
+        "pagePath": "pages/three/three",
+        "text": "test3"
       }
     ]
   },

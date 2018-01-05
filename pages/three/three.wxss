@@ -1,0 +1,8 @@
+.hover-three{
+  color:#00e;
+  padding:10px;
+}
+.navigator-three{
+padding:10px;
+color:#88e;
+}

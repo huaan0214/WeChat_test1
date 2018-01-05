@@ -31,20 +31,19 @@
     </view>
     <view class="section section_gap">
         <view class="section__title">slider</view>
-        <slider name="slider" show-value ></slider>
+        <slider name="slider" value="50"activeColor="#1aad19" show-value style="background-color:#eee" ></slider>
     </view>
 
     <view class="section">
         <view class="section__title">input</view>
         <input type="text" name="input" placeholder="账号/手机号" placeholder-style='color:#fff;background-color:#bbb' cursor-spacing="20" focus/>
-        <view>
         <input bindinput="bindKeyInput" type="text" password name="input" placeholder-style='color:#fff;background-color:#bbb'placeholder="密码(最多14位)" maxlength='14'cursor-spacing="20" style="width:110px"/>
         输入的密码是{{inputValue}}
-        </view>
         <input type="number" placeholder="数字" cursor-spacing="20"/> 
         <input type="idcard" placeholder="身份证" cursor-spacing="20"/> 
         <input type="digit" placeholder="带小数点的数字" cursor-spacing="20"/> 
     </view>
+
     <view class="section section_gap">
         <view class="section__title">radio</view>
         <radio-group name="radio-group">
@@ -52,6 +51,7 @@
             <label><radio value="radio2"/>radio2</label>
         </radio-group>
     </view>
+
     <view class="section section_gap">
         <view class="section__title">checkbox</view>
         <checkbox-group name="checkbox">
