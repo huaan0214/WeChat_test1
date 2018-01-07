@@ -1,4 +1,14 @@
 <!--index.wxml-->
+
+<contact-button type="default-dark" size="20"session-from="huaan`s pg">
+</contact-button>
+<button bindtap="chooseImageFile" type="primary">添加照片</button>
+<button bindtap="payMoney" type="primary">支付</button>
+
+<button catchtouchstart="startToRecord"
+catchtouchend="stopToRecord" type="{{buttonType}}">{{recordTips}}</button>
+<navigator class="index_navigate" open-type="navigate" url="media/media">前往多媒体</navigator>
+
 <view class="container">
 <view>{{ text }}</view>
 <button bindtap="warning" class="warning">taps warning</button>

@@ -1,10 +1,13 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+var record = ""
 Page({
   data: {
+    ifRecord:0,
     count:0,
+    recordTips:"按住录音",
+    buttonType:"primary",
     motto: 'Hello World 多丢人啊',
     text:"It was a basy morning!",
     array:["one","two",2,"love"],
@@ -34,7 +37,53 @@ Page({
   wx.showModal({
     title: '提示',
     content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
-  })},
+  })
+  },
+  chooseImageFile:function(){
+  wx.chooseImage({
+    count:1,
+    success: function (res) { 
+      wx.previewImage(
+        {urls:res.tempFilePaths,
+        }
+      )},
+  })
+  },
+  payMoney:function(){
+  wx.requestPayment({
+    timeStamp: '',
+    nonceStr: '',
+    package: '',
+    signType: '',
+    paySign: '',
+  })
+  },
+  startToRecord:function(){
+    this.setData({
+      recordTips: "松手结束",
+      buttonType: "warn",
+    })
+  wx.startRecord({
+    success:function(res){
+      record=res.tempFilePath
+      console.log("录音成功:"+record)
+      wx.playVoice({
+        filePath: res.tempFilePath
+      })
+    },
+    fail: function (res) {
+      console.log("录音失败")
+    }
+  })
+  },
+stopToRecord:function(){
+wx.stopRecord()
+this.setData({
+  recordTips: "按住录音",
+  buttonType: "primary",
+})
+},
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

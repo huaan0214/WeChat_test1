@@ -1,0 +1,31 @@
+<navigator class="media-navigate" open-type="navigateBack" delta="1">返回首页</navigator>
+<audio id="harveAudio" src="" controls="true" poster="{{}}" name="{{}}" author="{{}}" binderror="audioError" bindplay='' bindpause='' bindended='' bindtimeupdate=''></audio>
+<button bindtap="playMusic" type="primary">播放后台音乐</button>
+<button bindtap="getMusicInfo" type="primary">获取音乐播放状态</button>
+<view>
+  <view>status:{{status}}</view>
+  <view>dataUrl:{{dataUrl}}</view>
+  <view>urrentPosition:{{currentPosition}}</view>
+  <view>duration:{{duration}}</view>
+  <view>downloadPercent:{{downloadPercent}}</view>
+</view>
+<block>
+<view>全局唯一背景音频播放管理</view>
+<button size='mini'bindtap="audioManagePlay" type="primary">播放</button>
+<button size='mini'bindtap="audioManagePause" type="primary">暂停</button>
+<button size='mini'bindtap="audioManageStop" type="primary">停止</button>
+<view>当前播放时间：{{currentTime}}</view>
+<view> </view>
+</block>
+
+  <button size='mini'type="primary"bindtap="adjustPosition">{{position}}</button>
+  <button size='mini'type="primary"bindtap="adjustFlash">{{flash}}</button>
+  <button wx:if="{{taking=='拍摄'}}"size='mini'type="primary"bindtap="takePhoto">{{taking}}</button>
+  <button wx:if="{{taking=='重拍'}}"size='mini'type="primary"bindtap="reSetSrc">{{taking}}</button>
+  <button size='mini'type="primary"bindtap="savePhoto">保存</button>
+
+<navigator open-type='navigate'url="showsave/showsave">相册</navigator>
+  <text selectable>保存路径{{savePath}}</text>
+  
+<camera wx:if="{{src==''}}" device-position="{{position}}" flash="{{flash}}" binderror="" style="width: 100%; height: 300px;"></camera>
+<image wx:if="{{src!=''}}" mode="widthFix" src="{{src}}"></image>

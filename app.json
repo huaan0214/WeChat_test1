@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/media/media",
+    "pages/index/media/showsave/showsave",
     "pages/logs/logs",
     "pages/one/one",
     "pages/two/two",

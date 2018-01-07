@@ -22,3 +22,11 @@
 .usermotto {
   margin-top: 1px;
 }
+.index_navigate{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color:#00e;
+  padding:10px;
+}

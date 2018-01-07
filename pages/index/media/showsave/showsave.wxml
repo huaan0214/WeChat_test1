@@ -1,0 +1,10 @@
+<navigator open-type="navigateBack"delta="1">返回</navigator>
+<view wx:for="{{fileList}}" wx:for-item="fileItem">
+<label>
+<image src="{{fileItem.filePath}}"></image>
+<form bindsubmit='deleteFile'>
+<input name="imagePath" value="{{fileItem.filePath}}"placeholder="{{fileItem.filePath}}"></input>
+<button size="mini" type="warn"form-type="submit">delete</button>
+</form>
+</label>
+</view>
