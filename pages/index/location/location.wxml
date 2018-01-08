@@ -1,0 +1,3 @@
+<!--pages/index/location/location.wxml-->
+<navigator open-type='navigateBack'delta="1" class="location_navigate">返回首页</navigator>
+<map longitude="{{longitude}}" latitude="{{latitude}}" scale='{{scale}}' markers='{{markers}}' show-location bindmarkertap="bindMarkerTap" bindcallouttap="" bindregionchange="" bindtap="bindMapTap"></map>

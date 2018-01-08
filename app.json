@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/index/media/media",
     "pages/index/media/showsave/showsave",
@@ -7,23 +7,23 @@
     "pages/one/one",
     "pages/two/two",
     "pages/three/three",
-    "pages/three/three1"
+    "pages/three/three1",
+    "pages/index/location/location"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "华安的小程序",
-    "navigationBarTextStyle":"black",
-    "backgroundColor":"#eeeeee",
-    "onPullDownRefresh":"true"
-
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee",
+    "onPullDownRefresh": "true"
   },
   "tabBar": {
-    "color":"#00ffff",
-    "selectedColor":"#ff00ff",
-    "backgroundColor":"#fff",
-    "borderStyle":"black",
-    "position":"top",
+    "color": "#00ffff",
+    "selectedColor": "#ff00ff",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "position": "top",
     "list": [
       {
         "pagePath": "pages/index/index",
