@@ -9,6 +9,7 @@
 catchtouchend="stopToRecord" type="{{buttonType}}">{{recordTips}}</button>
 <navigator class="index_navigate" open-type="navigate" url="media/media">前往多媒体</navigator>
 <navigator class="index_navigate" open-type="navigate" url="location/location">前往位置</navigator>
+<navigator class="index_navigate" open-type="navigate" url="system/system">前往系统信息</navigator>
 
 <view class="container">
 <view>{{ text }}</view>

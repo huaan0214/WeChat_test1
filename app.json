@@ -8,7 +8,8 @@
     "pages/two/two",
     "pages/three/three",
     "pages/three/three1",
-    "pages/index/location/location"
+    "pages/index/location/location",
+    "pages/index/system/system"
   ],
   "window": {
     "backgroundTextStyle": "light",

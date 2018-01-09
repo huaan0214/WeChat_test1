@@ -1,0 +1,25 @@
+<!--pages/index/system/system.wxml-->
+<navigator open-type='navigateBack'delta="1" class="system_navigate">返回首页</navigator>
+<button size="mini" type="primary" bindtap="getSysInfo">获取手机信息</button>
+<view wx:if="{{getInfoReady}}">
+<view>model(手机型号):{{model}}</view>
+<view>pixelRatio(设备像素比):{{pixelRatio}}</view>
+<view>screenWidth:(屏幕宽度):{{screenWidth}}</view>
+<view>screenHeight:(屏幕高度):{{screenHeight}}</view>
+<view>windowWidth（窗口宽度）:{{windowWidth}}</view>
+<view>windowHeight（窗口高度）:{{windowHeight}}</view>
+<view>language（微信设置语音）:{{language}}</view>
+<view>version（微信版本）:{{version}}</view>
+<view>system（操作系统版本）:{{system}}</view>
+<view>platform（客户端平台）:{{platform}}</view>
+<view>SDKVersion(客户端基础库版本)：{{SDKVersion}}</view>
+</view>
+
+
+<button size="mini" type="primary" bindtap="aboutCanIUse">CanIUse?</button>
+<button size="mini" type="primary" bindtap="getNetworkStatus">获取网络状态类型</button>
+<view wx:if="{{getNetworkReady}}">
+<view>网络状态：{{networkType}}</view>
+<view>是否有网络连接：{{isConnected}}</view>
+</view>
+<button size="mini" type="primary" bindtap="hindInfo">隐藏信息</button>
