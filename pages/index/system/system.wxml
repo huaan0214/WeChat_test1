@@ -23,3 +23,14 @@
 <view>是否有网络连接：{{isConnected}}</view>
 </view>
 <button size="mini" type="primary" bindtap="hindInfo">隐藏信息</button>
+<view bindtap="callPhone">联系客服：{{phoneNumber}}</view>
+<view>
+<button size="mini" type="primary" bindtap="scanCodes">扫一扫</button>
+</view>
+<text selectable>详情：{{scanCodeResult}},路径：{{scanCodePath}}</text>
+<view>
+<view>重力感应数据：x,y,z:{{x}},{{y}},{{z}}</view>
+</view>
+<view>
+<view>现在的方向：{{nowDirection}}</view>
+</view>
