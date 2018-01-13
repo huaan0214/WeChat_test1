@@ -9,7 +9,8 @@
     "pages/three/three",
     "pages/three/three1",
     "pages/index/location/location",
-    "pages/index/system/system"
+    "pages/index/system/system",
+    "pages/index/show/show"
   ],
   "window": {
     "backgroundTextStyle": "light",

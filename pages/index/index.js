@@ -166,5 +166,11 @@ this.setData({
     this.setData({
       numberArray: this.data.numberArray
     })
-  }
+  },
+  onHide: function () {
+    wx.setTopBarText({
+      text: 'hello world',
+    })
+
+  },
 })

@@ -34,3 +34,11 @@
 <view>
 <view>现在的方向：{{nowDirection}}</view>
 </view>
+<view>设置当前小程序中屏幕亮度：
+<slider min="0" max="100" step="1" value="{{brightness}}" show-value backgroundColor="#eee" activeColor='#888'  bindchanging="brightChange"></slider>
+</view>
+<view>设置小程序内屏幕常亮
+<switch  type="switch" bindchange='keepScreenOn'>{{onOrOff}}</switch>
+</view>
+<button size="mini" type="primary" bindtap="longVibrate">400ms震动</button>
+<button size="mini" type="primary" bindtap="shortVibrate">15ms震动</button>

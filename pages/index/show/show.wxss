@@ -1,0 +1,9 @@
+/* pages/index/show/show.wxss */
+.show_navigate{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color:#00e;
+  padding:10px;
+}

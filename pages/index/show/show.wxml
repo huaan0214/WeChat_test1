@@ -1,0 +1,12 @@
+<!--pages/index/show/show.wxml-->
+<navigator open-type='navigateBack' delta='1' class='show_navigate'>返回主页</navigator>
+<view>交互反馈</view>
+<button size="mini" type="primary" bindtap='showtoast'>showToast</button>
+<button size="mini" type="primary" bindtap='showloading'>showLoading</button>
+<button size="mini" type="primary" bindtap='hideloading'>hideLoading</button>
+<button size="mini" type="primary" bindtap='showmodal'>hideModal</button>
+<button size="mini" type="primary" bindtap='showactionsheet'>showActionSheet</button>
+<view>设置导航条</view>
+<button size="mini" type="primary" bindtap='setBarTitle'>setBarTitle</button>
+<view animation="{{animationData}}" style="background:red,height:100rpx,width:100rpx">这是一个动画</view>
+<button size="mini" type='primary' bindtap="scrollPosition">滚动到页面置顶位置</button>

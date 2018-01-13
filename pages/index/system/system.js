@@ -30,7 +30,9 @@ Page({
     scanCodeResult:"无",
     scanCodePath:"无",
 
-    nowDirection:""
+    nowDirection:"",
+    brightness:0,
+    onOrOff:"OFF",
   
   },
   getSysInfo:function(){
@@ -102,6 +104,34 @@ scanCodes:function(){
       },
     })
   },
+  brightChange:function(e){
+    wx.setScreenBrightness({
+      value: e.detail.value/100.0
+    })
+  },
+  keepScreenOn:function(e){
+    wx.setKeepScreenOn({
+      keepScreenOn: e.detail.value
+    })
+    if(e.detail.value)
+    this.setData({
+      onOrOff:"ON"
+    })
+    else
+    this.setData({
+      onOrOff: "OFF"
+    })
+  },
+  longVibrate:function(){
+    wx.vibrateLong({
+      
+    })
+  },
+  shortVibarte:function(){
+    wx.vibrateShort({
+      
+    })
+  },
   
   /**
    * 生命周期函数--监听页面加载
@@ -168,11 +198,28 @@ scanCodes:function(){
       }) 
    
   })
+  wx.onUserCaptureScreen(function (res) {
+    wx.showToast({
+      title: '您刚截屏啦',
+      icon:"success",
+      duration:3000,
+      mask:true
+    })
+  }),
+
 
   wx.onCompassChange(res=>{
     this.setData({
       nowDirection:res.direction
     })
+  })
+
+  wx.getScreenBrightness({
+    success: res=> {
+      this.setData({
+        brightness: res.value * 100
+      })
+    }
   })
   },
 
@@ -187,7 +234,8 @@ scanCodes:function(){
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
+
   },
 
   /**
